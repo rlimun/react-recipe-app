@@ -39,6 +39,7 @@ function RecipeCreate({createRecipe}) {
   
   return (
     <form name="create" onSubmit={handleSubmit}>
+      <footer>
       <table>
         <tbody>
           <tr>
@@ -53,9 +54,6 @@ function RecipeCreate({createRecipe}) {
                 required={true}
                 />       
             </td>
-          </tr>
-          <tr>
-            
             <td>
               <label htmlFor="cuisine">cuisine</label>
               <input
@@ -67,8 +65,6 @@ function RecipeCreate({createRecipe}) {
                 required={true}
                 />
             </td>
-          </tr>
-          <tr>
             <td>
               <label htmlFor="photo">photo</label>
               <input
@@ -79,8 +75,6 @@ function RecipeCreate({createRecipe}) {
                 onChange={handleChange}
                 />
             </td>
-          </tr>
-          <tr>
             <td>
               <label htmlFor="rating">rating</label>
               <select
@@ -96,8 +90,6 @@ function RecipeCreate({createRecipe}) {
                   <option>5</option>
                 </select>
             </td>
-          </tr>
-          <tr>
             <td>
               <label htmlFor="ingredients">ingredients</label>
               <textarea
@@ -109,8 +101,6 @@ function RecipeCreate({createRecipe}) {
                 required={true}
                 />
             </td>
-          </tr>
-          <tr>
             <td>
               <label htmlFor="preparation">preparations</label>
               <textarea
@@ -122,13 +112,13 @@ function RecipeCreate({createRecipe}) {
                 required={true}
                 />
             </td>
-          </tr>
             <td>
               <button type="submit">Create</button>
             </td>
+          </tr>
         </tbody>
       </table>
-        
+      </footer>
     </form>
   );
 }
