@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
+/*
+  Recipe view component that displays a single recipe with attributes: name, cuisine, photo, ingredients, preparation
+  @param {Object} recipe: recipe, {function} deleteRecipe: deletes a recipe
+*/
 function RecipeView({ recipe, deleteRecipe }) {
   return (
-
       <tr>
       <td><p name="name">{(recipe.name)}</p></td>
       <td><p name="cuisine">{(recipe.cuisine)}</p></td>

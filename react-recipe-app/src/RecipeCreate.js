@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
+/*
+  Recipe create component that manages the creation of a new recipe
+  This renders a form at the footer with input fields for: name, cuisine, photo, rating, ingredients, and preparation
+  @param {function} createRecipe: creates a new recipe
+*/
 function RecipeCreate({createRecipe}) {
-
-  // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
-  // TODO: Add the required input and textarea form elements.
-  // TODO: Add the required submit and change handlers
-  
   const [name, setName] = useState("");
   const [cuisine, setCuisine] = useState("");
   const [photo, setPhoto] = useState("");
@@ -24,6 +24,10 @@ function RecipeCreate({createRecipe}) {
 
   const [formData, setFormData] = useState({...initialFormState});
 
+  /*
+    Handles the changes in the form input values
+    @param {Object} target - the target to change
+  */
   const handleChange = ({ target }) => {
     setFormData({
       ...formData,
@@ -31,10 +35,14 @@ function RecipeCreate({createRecipe}) {
     })
   };
 
+  /*
+    Handles the form submission
+    @param {Object} event - the form submission event
+  */
   const handleSubmit = (event) => {
-    event.preventDefault();
-    createRecipe(formData);
-    setFormData({...initialFormState});
+    event.preventDefault(); //prevents default form behavior
+    createRecipe(formData); //invokes createRecipe callback
+    setFormData({...initialFormState}); //resets the form to initial state
   };
   
   return (

@@ -72,8 +72,9 @@ table {
   text-overflow: ellipsis;
 }
 
+/* Place form inputs at the very bottom of the page */
 footer {
-  position: fixed; /* or absolute, depending on your layout */
+  position: fixed; 
   bottom: 0;
 }
 
